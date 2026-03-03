@@ -1,39 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ROBLOX.com</title>
     <link rel="icon" type="image/vnd.microsoft.icon" href="https://www.roblox.com/favicon.ico">
     <style>
-        /* actual 2016 styles since the archive ones are dead */
-        body { margin: 0; padding: 0; font-family: "Source Sans Pro", Arial, sans-serif; background: #fff; color: #343434; }
-        header { background: #fff; height: 40px; padding: 5px 20px; border-bottom: 1px solid #b8b8b8; display: flex; align-items: center; justify-content: space-between; }
-        .nav-bar { background: #393939; padding: 7px 50px; display: flex; gap: 20px; }
-        .nav-bar a { color: #fff; text-decoration: none; font-size: 15px; }
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+        
+        body { 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif; 
+            background: #fff; 
+            color: #343434; 
+            overflow-x: hidden;
+        }
+
+        header { 
+            background: #fff; 
+            height: 45px; 
+            padding: 0 20px; 
+            border-bottom: 1px solid #b8b8b8; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+        }
+
+        .nav-bar { 
+            background: #393939; 
+            padding: 8px 20px; 
+            display: flex; 
+            gap: 20px; 
+        }
+
+        .nav-bar a { 
+            color: #fff; 
+            text-decoration: none; 
+            font-size: 14px; 
+            font-weight: 400;
+        }
+
         .hero { 
-            background: url('https://images.rbxcdn.com/e870a0b9bcd987fbe7f730c8002f8faa.png') no-repeat center; 
+            background: url('https://images.rbxcdn.com/e870a0b9bcd987fbe7f730c8002f8faa.png') no-repeat center top; 
             background-size: cover; 
-            height: 540px; 
+            min-height: 500px; 
             display: flex; 
             align-items: center; 
             justify-content: center;
+            padding: 20px;
         }
-        .signup-box { background: rgba(255,255,255,0.9); padding: 30px; border-radius: 3px; width: 340px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
-        .logo { width: 125px; height: 35px; background: url('https://images.rbxcdn.com/39ae3ca577c8488487ef492031b8e264.png') no-repeat; background-size: contain; }
-        .btn-blue { background: #0084ff; color: #fff; border: none; padding: 12px; width: 100%; font-weight: bold; cursor: pointer; border-radius: 2px; font-size: 16px; }
-        input { width: 92%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 2px; }
-        footer { padding: 40px; text-align: center; background: #f2f2f2; font-size: 12px; color: #666; }
+
+        .signup-box { 
+            background: rgba(255, 255, 255, 0.98); 
+            padding: 25px; 
+            border-radius: 3px; 
+            width: 100%;
+            max-width: 360px; 
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+            text-align: left;
+        }
+
+        .logo { 
+            width: 120px; 
+            height: 30px; 
+            background: url('https://images.rbxcdn.com/39ae3ca577c8488487ef492031b8e264.png') no-repeat; 
+            background-size: contain; 
+        }
+
+        .btn-blue { 
+            background: #0084ff; 
+            color: #fff; 
+            border: none; 
+            padding: 12px; 
+            width: 100%; 
+            font-weight: 700; 
+            cursor: pointer; 
+            border-radius: 3px; 
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        input { 
+            width: calc(100% - 22px); 
+            padding: 10px; 
+            margin-bottom: 12px; 
+            border: 1px solid #c3c3c3; 
+            border-radius: 3px; 
+            font-size: 14px;
+        }
+
+        .info-section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        footer { 
+            padding: 30px; 
+            text-align: center; 
+            background: #f2f2f2; 
+            font-size: 12px; 
+            color: #777; 
+            border-top: 1px solid #e3e3e3;
+        }
+
+        select { padding: 8px; border: 1px solid #ccc; border-radius: 3px; margin-right: 5px; }
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo"></div>
-    <div style="font-size: 13px;"><a href="#" style="color:#0084ff; text-decoration:none;">Log In</a></div>
+    <div style="font-size: 13px;"><a href="#" style="color:#0084ff; text-decoration:none; font-weight:600;">Log In</a></div>
 </header>
 
 <div class="nav-bar">
     <a href="#">Games</a>
+    <a href="#">Catalog</a>
+    <a href="#">Develop</a>
+    <a href="#">Forum</a>
+</div>
+
+<div class="hero">
+    <div class="signup-box">
+        <h2 style="margin-top:0; font-weight:600; font-size: 22px;">Sign up and start having fun!</h2>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <input type="password" placeholder="Confirm Password">
+        <div style="margin-bottom:15px; font-size:13px;">
+            <label style="display:block; margin-bottom:5px; font-weight:600;">Birthday</label>
+            <select><option>Month</option></select>
+            <select><option>Day</option></select>
+            <select><option>Year</option></select>
+        </div>
+        <button class="btn-blue">Sign Up</button>
+        <p style="font-size:11px; color:#999; text-align:center; margin-top:15px;">By clicking Sign Up, you are agreeing to the <a href="#" style="color:#999;">Terms of Service</a>.</p>
+    </div>
+</div>
+
+<div class="info-section">
+    <h2 style="font-weight:600;">Powering Imagination™</h2>
+    <p style="line-height:1.6; color:#555;">ROBLOX is the best place to Imagine with Friends™. With the largest user-generated online gaming platform, play games made by other users in an immersive, 3D environment.</p>
+</div>
+
+<footer>
+    <p>&copy; 2016 ROBLOX Corporation. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
     <a href="#">Catalog</a>
     <a href="#">Develop</a>
     <a href="#">Forum</a>
